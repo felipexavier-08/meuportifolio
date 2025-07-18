@@ -7,8 +7,10 @@
 
 }
 
+
 html{
     scroll-behavior: smooth;
+    
 }
 
 
@@ -113,17 +115,18 @@ header{
 }
 
 section{
-    padding: 4rem 0;
+    padding: 3rem 0;
     text-align: center;
     min-height: 100vh;
     align-items: center;
     align-content: center;
+
 }
 
 .titulo {
     font-size: 2rem;
     color: #00bcd4;
-    margin-bottom: 13rem;
+    margin-bottom: 10rem;
 }
 
 .texto {
@@ -271,13 +274,17 @@ section{
 
 }
 
+#contato{
+    justify-content: center;
+}
+
 @media (max-width: 600px) {
     
     .containercontato{
 
         display: flex;
         flex-direction: column;
-        align-content: center;
+        align-items: center;
         justify-content: center;
     
         
@@ -301,6 +308,7 @@ img{
 
 
 }
+
 
 form {
     display: flex;
