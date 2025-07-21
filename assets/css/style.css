@@ -250,6 +250,13 @@ section{
     border-radius: 12px;
     transition: transform 0.3s, box-shadow 0.3s;
 
+     .github-link{
+
+         color: black;
+         margin-left: 15px;
+
+     }
+
 }
 
 .card-projeto:hover {
@@ -263,12 +270,7 @@ section{
     color: #00bcd4;
 }
 
-.github-link{
 
-    color: black;
-    margin-left: 15px;
-
-}
 
 .containercontato{
 
