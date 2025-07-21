@@ -117,7 +117,7 @@ header{
 section{
     padding: 3rem 0;
     text-align: center;
-    min-height: 50vh;
+    min-height: 60vh;
     align-items: center;
     align-content: center;
 
@@ -240,7 +240,7 @@ section{
 
 .grid-projetos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
     gap: 2rem;
 }
 
@@ -261,6 +261,13 @@ section{
 .link-projeto {
     margin-top: 1rem;
     color: #00bcd4;
+}
+
+.github-link{
+
+    color: black;
+    margin-left: 15px;
+
 }
 
 .containercontato{
