@@ -1,36 +1,25 @@
-// Seu arquivo JS no Portfólio (Frontend)
+document.getElementById('formulario-de-contato').addEventListener('submit', function(event) {
 
-document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
-
-    const name = document.getElementById('nome').value;
+    const nome = document.getElementById('nome').value;
     const email = document.getElementById('email').value;
-    const message = document.getElementById('menssagem').value;
+    const assunto = "contato a partir do portifolio";
+    const mensagem = document.getElementById('mensagem').value;
 
-    // Endereço do seu endpoint de backend. Se estiver testando localmente, é 'http://localhost:3000/send'
-    // Quando você hospedar, mude para o endereço real do seu servidor!
-    const backendURL = 'http://localhost:3000/send'; 
+    const meuEmail = "felipexreisjj@gmail.com";
+    
+    const conteudo = 
+        `Nome: ${nome}%0D%0A` +
+        `E-mail de Contato: ${email}%0D%0A%0D%0A` + 
+        `Mensagem:%0D%0A${mensagem}`;
 
-    fetch(backendURL, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ name, email, message }) // Envia os dados como JSON
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.msg.includes('sucesso')) {
-            statusDisplay.style.color = 'green';
-            document.getElementById('contact-form').reset();
-        } else {
-            statusDisplay.style.color = 'red';
-        }
-        statusDisplay.textContent = data.msg;
-    })
-    .catch(error => {
-        console.error('Erro de rede:', error);
-        statusDisplay.style.color = 'red';
-        statusDisplay.textContent = 'Erro de conexão. Tente novamente mais tarde.';
-    });
+    const mailtoLink = 
+        `mailto:${meuEmail}` + 
+        `?subject=${encodeURIComponent(assunto)}` +
+        `&body=${encodeURIComponent(conteudo)}`;
+        
+    window.location.href = mailtoLink;
+
+    document.getElementById('form-status').textContent = 'Seu e-mail deve ter sido aberto. Por favor, envie a mensagem por lá.';
+    this.reset();
 });
