@@ -9,9 +9,9 @@ document.getElementById('formulario-de-contato').addEventListener('submit', func
     const meuEmail = "felipexreisjj@gmail.com";
     
     const conteudo = 
-        `Nome: ${nome}%0D%0A` +
-        `E-mail de Contato: ${email}%0D%0A%0D%0A` + 
-        `Mensagem:%0D%0A${mensagem}`;
+        `Nome: ${nome}` +
+        `E-mail de Contato: ${email}` + 
+        `Mensagem:${mensagem}`;
 
     const mailtoLink = 
         `mailto:${meuEmail}` + 
